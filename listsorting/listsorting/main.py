@@ -37,18 +37,28 @@ def listsorting(
     approach: ListSortingApproach = ListSortingApproach.bubblesort,
 ) -> None:
     """Conduct a doubling experiment to measure the performance of list sorting for various algorithms."""
-    # TODO: display diagnostic details about the configuration of the experiment
+    console.print(":sparkles: Conducting and experiment to measure the performance of list sorting!")
+    # Display diagnostic details about the configuration of the experiment
+    console.print(f"The chosen sorting algorithm: {approach}")
+    console.print(f"Starting size of the data container: {starting_size}")
+    console.print(f"Number of doubles to execute: {number_doubles}")
+    console.print()
+    
     # TODO: display the details about the results from running the experiment,
     # first by giving a label so show that the program will provide output
+    
     # TODO: create the name of the algorithm as a string using the approach
     # and then appending the _sort postfix to the end of the name;
     # this leads to the creation of names like "merge_sort"
+    
     # TODO: conduct a doubling experiment for sorting by calling the run_sorting_algorithm_experiment_campaign
     # function with the inputs in the following order:
     # --> algorithm
     # --> starting_size
     # --> maximum_value
     # --> number_doubles
+
+    console.print(":sparkles: Here are the results from running the experiment!")
     # TODO: use the tabulate function to create a data table of the experimental_results
     # make sure that the data table has a header that is organized in this fashion:
     # --> Column 1: Input Size
