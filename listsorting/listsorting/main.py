@@ -10,7 +10,7 @@ import typer
 from rich.console import Console
 from tabulate import tabulate
 
-from listsorting import experiment
+from listsorting import experiment  
 
 # create a Typer object to support the command-line interface
 cli = typer.Typer()
@@ -18,6 +18,8 @@ cli = typer.Typer()
 # create a console for rich text output
 console = Console()
 
+SORT_FUNCTION_BASE = "sort"
+UNDERSCORE = "_"
 
 class ListSortingApproach(str, Enum):
     """Define the name for the approach for performing list sorting with different algorithms."""
@@ -44,30 +46,25 @@ def listsorting(
     console.print(f"Number of doubles to execute: {number_doubles}")
     console.print()
     
-    # TODO: display the details about the results from running the experiment,
-    # first by giving a label so show that the program will provide output
-    
-    # TODO: create the name of the algorithm as a string using the approach
-    # and then appending the _sort postfix to the end of the name;
+    # display the details about the results from running the experiment, first by giving a label so show that the program will provide output
+    # create the name of the algorithm as a string using the approach and then appending the _sort postfix to the end of the name;
     # this leads to the creation of names like "merge_sort"
-    
-    # TODO: conduct a doubling experiment for sorting by calling the run_sorting_algorithm_experiment_campaign
+    algorithm = approach + UNDERSCORE + SORT_FUNCTION_BASE
+    # conduct a doubling experiment for sorting by calling the run_sorting_algorithm_experiment_campaign
     # function with the inputs in the following order:
-    # --> algorithm
-    # --> starting_size
-    # --> maximum_value
-    # --> number_doubles
+    # --> algorithm --> starting_size --> maximum_value --> number_doubles
+    results = experiment.run_sorting_algorithm_experiment_campaign(algorithm, starting_size, maximum_value, number_doubles)
 
     console.print(":sparkles: Here are the results from running the experiment!")
-    # TODO: use the tabulate function to create a data table of the experimental_results
+    # use the tabulate function to create a data table of the experimental_results
     # make sure that the data table has a header that is organized in this fashion:
     # --> Column 1: Input Size
     # --> Column 2: Minimum execution time in seconds
     # --> Column 3: Maximum execution time in seconds
     # --> Column 4: Average execution time in seconds
-    # There must be a header that displays these labels and
-    # then the data should be displayed below it in rows.
-    # There should be a single row for each level of the
-    # doubling experiment conducted by run_sorting_algorithm_experiment_campaign
-    # Reference for the tabulate package:
-    # https://github.com/astanin/python-tabulate
+    # There must be a header that displays these labels and then the data should be displayed below it in rows.
+    # There should be a single row for each level of the doubling experiment conducted by run_sorting_algorithm_experiment_campaign
+    # Reference for the tabulate package: https://github.com/astanin/python-tabulate
+
+    printTable = tabulate(results, headers=["Input Size", "Min time (s)", "Max time (s)", "Avg time (s)"])
+    console.print(printTable)
