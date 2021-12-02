@@ -7,13 +7,15 @@ from random import randint
 # Reference for some algorithm implementations:
 # https://realpython.com/sorting-algorithms-python/
 
-# TODO: Add all of the source code based on the above article
+# Add all of the source code based on the above article
 
 
 def bubble_sort(array: List[int]) -> List[int]:
     """Sort an input list called array using bubble sort."""
+    # Initialize num as the length of the input array
     num = len(array)
 
+    # Iterate through items in the range of the length of the input
     for i in range(num):
         # Create a flag for when there's nothing left to sort
         already_sorted = True
@@ -54,12 +56,14 @@ def insertion_sort(array: List[int]) -> List[int]:
 def merge(left: List[int], right: List[int]) -> List[int]:
     """Define a convenience method that supports the merging of lists."""
     # Check for empty arrays
+    # Check first or "left" array for empty, return other array
     if len(left) == 0:
         return right
-
+    # Check second or "right" array for empty, return other array
     if len(right) == 0:
         return left
 
+    # Initialize new list and set index to zero before beginning
     result = []
     index_left = index_right = 0
 

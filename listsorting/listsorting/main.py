@@ -49,13 +49,17 @@ def listsorting(
     console.print(f"Number of doubles to execute: {number_doubles}")
     console.print()
 
-    # display the details about the results from running the experiment, first by giving a label so show that the program will provide output
+    # display the details about the results from running the experiment,
+    # first by giving a label so show that the program will provide output
     # create the name of the algorithm as a string using the approach and then appending the _sort postfix to the end of the name;
     # this leads to the creation of names like "merge_sort"
     algorithm = approach + UNDERSCORE + SORT_FUNCTION_BASE
     # conduct a doubling experiment for sorting by calling the run_sorting_algorithm_experiment_campaign
     # function with the inputs in the following order:
-    # --> algorithm --> starting_size --> maximum_value --> number_doubles
+    # --> algorithm
+    # --> starting_size
+    # --> maximum_value
+    # --> number_doubles
     results = experiment.run_sorting_algorithm_experiment_campaign(
         algorithm, starting_size, maximum_value, number_doubles
     )
@@ -69,8 +73,9 @@ def listsorting(
     # --> Column 4: Average execution time in seconds
     # There must be a header that displays these labels and then the data should be displayed below it in rows.
     # There should be a single row for each level of the doubling experiment conducted by run_sorting_algorithm_experiment_campaign
-    # Reference for the tabulate package: https://github.com/astanin/python-tabulate
-
+    # Reference for the tabulate package:
+    # https://github.com/astanin/python-tabulate
+    """Print output and table in the console"""
     printTable = tabulate(
         results, headers=["Input Size", "Min time (s)", "Max time (s)", "Avg time (s)"]
     )
