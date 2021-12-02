@@ -20,9 +20,9 @@ def bubble_sort(array: List[int]) -> List[int]:
 
         # Start looking at the list if it has already been sorted
         for j in range(num - i - 1):
-            if array[j] > array [j + 1]:
-                # If it is greater than, then swap it 
-                array[j], array [j + 1] = array[j + 1], array [j]
+            if array[j] > array[j + 1]:
+                # If it is greater than, then swap it
+                array[j], array[j + 1] = array[j + 1], array[j]
                 # Wasn't sorted, so set flag to false
                 already_sorted = False
 
@@ -30,6 +30,7 @@ def bubble_sort(array: List[int]) -> List[int]:
         if already_sorted:
             break
     return array
+
 
 def insertion_sort(array: List[int]) -> List[int]:
     """Run an insertion sort on the provided array."""
@@ -49,6 +50,7 @@ def insertion_sort(array: List[int]) -> List[int]:
         array[j + 1] = key_item
     return array
 
+
 def merge(left: List[int], right: List[int]) -> List[int]:
     """Define a convenience method that supports the merging of lists."""
     # Check for empty arrays
@@ -57,7 +59,7 @@ def merge(left: List[int], right: List[int]) -> List[int]:
 
     if len(right) == 0:
         return left
-    
+
     result = []
     index_left = index_right = 0
 
@@ -82,7 +84,6 @@ def merge(left: List[int], right: List[int]) -> List[int]:
     return result
 
 
-
 def merge_sort(array: List[int]) -> List[int]:
     """Sort the provided list called array with the merge sort algorithm."""
     # If array has less than 2 elements, return it as result
@@ -92,10 +93,8 @@ def merge_sort(array: List[int]) -> List[int]:
     midpoint = len(array) // 2
 
     # Sort array through recursively spitting into halves
-    return merge(
-        left=merge_sort(array[:midpoint]),
-        right=merge_sort(array[midpoint:])
-    )
+    return merge(left=merge_sort(array[:midpoint]), right=merge_sort(array[midpoint:]))
+
 
 def quick_sort(array: List[int]) -> List[int]:
     """Sort the provided list called array with the quick sort algorithm."""
@@ -124,6 +123,7 @@ def quick_sort(array: List[int]) -> List[int]:
     # Final result combines all the lists
     return quick_sort(low) + same + quick_sort(high)
 
+
 def insertion_sort_tim(array: List[int], left: int = 0, right=None):
     """Use an internal sorting algorithm for the timsort algorithm."""
     if right is None:
@@ -146,8 +146,9 @@ def insertion_sort_tim(array: List[int], left: int = 0, right=None):
 
         # When done shifting elements, move key_item to correct location
         array[j + 1] = key_item
-    
+
     return array
+
 
 def tim_sort(array: List[int]) -> List[int]:
     """Sort the list called array with the tim sort algorithm using a special insertion sort."""
@@ -169,13 +170,13 @@ def tim_sort(array: List[int]) -> List[int]:
 
             # Merge the two subarrays
             mergedArray = merge(
-                left=array[start:midpoint + 1],
-                right=array[midpoint + 1:endpoint + 1]
+                left=array[start : midpoint + 1],
+                right=array[midpoint + 1 : endpoint + 1],
             )
 
             # Put merged array as array
-            array[start:start + len(mergedArray)] = mergedArray
-        
+            array[start : start + len(mergedArray)] = mergedArray
+
         # Each iteration doubles the size of arrays
         size *= 2
 

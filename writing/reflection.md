@@ -1,29 +1,52 @@
 # Sorting Algorithms
 
-## Add Your Name Here
+## Kate Folkenroth
 
 ## Program Output
 
 ### Report at least five examples of program output to demonstrate that your `listsorting` program works correctly
 
-TODO: Document and justify your choice for all of the experiment parameters
-TODO: Make sure that you provide one output for each of the sorting algorithms
+Below are the example outputs from running the `listsorting` program. In each section, the output is labeled with the relevant research question (parameters are described thoroughly in the [Experiment Design](#Experiment-Design) section below), the command inputted to the terminal, and the subsequent output.
 
-#### One output from running the `listsorting` program
+#### BubbleSort output from running the `listsorting` program
 
-#### One output from running the `listsorting` program
+RQ --. 
 
-#### One output from running the `listsorting` program
+`//`
 
-#### One output from running the `listsorting` program
+```
+//
+```
 
-#### One output from running the `listsorting` program
+#### InsertionSort output from running the `listsorting` program
+
+`//`
+
+```
+//
+```
+
+#### MergeSort output from running the `listsorting` program
+
+`//`
+
+```
+//
+```
+
+#### QuickSort output from running the `listsorting` program
+
+`//`
+
+```
+//
+```
+
+#### TimSort Output from running the `listsorting` program
 
 ## Experiment Design
 
-TODO: Explain the setup for your experiment that you ran to characterize the
-performance of the different configurations of containment checking algorithms.
-For instance, you should consider the following parameters as a part of your
+TODO: Explain the setup for your experiment that you ran to characterize the performance of the different configurations of containment checking algorithms. For instance, you should consider the following parameters as a part of your
 experiment:
 
 - The specific sorting algorithm
@@ -31,26 +54,25 @@ experiment:
   values (e.g., 1,048,576 numbers)
 - The total number of doubles conducted during the experiment (e.g., 5 or 10)
 
-TODO: You may need to design a custom experiment for certain sorting algorithms
-due the fact that there may be some algorithms that are inefficient!
+TODO: You may need to design a custom experiment for certain sorting algorithms due the fact that there may be some algorithms that are inefficient!
 
-TODO: You must justify every part of your experiment design and then furnish
-output examples to demonstrate that your program generates correct data!
+TODO: You must justify every part of your experiment design and then furnish output examples to demonstrate that your program generates correct data!
 
 ## Research Questions
 
-TODO: Clearly state at least three research questions that you want to ask and
-answer by using the `listsorting` program. You should provide the research
-questions in a list that where each list element starts with "RQ" and ends with
-a question mark. Make sure that the totality of your research questions cover
-all of the sorting algorithms provided by the `listsorting` program.
+// TODO: Make sure that the totality of your research questions cover all of the sorting algorithms provided by the `listsorting` program.
+
+* RQ 1. ---?
+
+* RQ 2. ---?
+
+* RQ 3. ---?
 
 ## Performance Analysis
 
 ### Empirical Evaluation
 
-TODO: The output data tables provided above of the ones that you should
-reference when you are reporting on your empirical evaluation.
+TODO: The output data tables provided above of the ones that you should reference when you are reporting on your empirical evaluation.
 
 TODO: Provide at least three paragraphs that explain which containment checking
 algorithm is fastest, by how much it is faster, and how you knew that it was
@@ -63,13 +85,8 @@ TODO: It is not sufficient to ONLY explain WHICH configuration is faster!
 
 ### Analytical Evaluation
 
-TODO: Using the provided source code for the different containment check
-algorithms, your textbook, your experimental results, and any relevant online
-resources that you cite in this reflection, define the worst-case time
-complexity, using the big-O notation, for the five sorting algorithms. Please
-note that you do not need to prove the worst-case time complexity; rather you
-may reference existing sources that tell you the worst-case time complexity and
-then confirm that they are correct by using your empirical results.
+TODO: Using the provided source code for the different containment check algorithms, your textbook, your experimental results, and any relevant online resources that you cite in this reflection, define the worst-case time complexity, using the big-O notation, for the five sorting algorithms. Please note that you do not need to prove the worst-case time complexity; rather you
+may reference existing sources that tell you the worst-case time complexity and then confirm that they are correct by using your empirical results.
 
 ## Professional Development
 
