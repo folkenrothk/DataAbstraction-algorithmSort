@@ -6,43 +6,107 @@
 
 ### Report at least five examples of program output to demonstrate that your `listsorting` program works correctly
 
-Below are the example outputs from running the `listsorting` program. In each section, the output is labeled with the relevant research question (parameters are described thoroughly in the [Experiment Design](#Experiment-Design) section below), the command inputted to the terminal, and the subsequent output.
+Below are the example outputs from running the `listsorting` program.  Each output has been collected for research question 1 (RQ1). The parameters are described thoroughly in the [Experiment Design](#Experiment-Design) section below. In each section, labeled with the command inputted to the terminal and the subsequent output.
 
 #### BubbleSort output from running the `listsorting` program
 
-RQ --. 
-
-`//`
+`poetry run listsorting --starting-size 105 --number-doubles 5 --approach bubble`
 
 ```
-//
+✨ Conducting and experiment to measure the performance of list sorting!
+The chosen sorting algorithm: bubble
+Starting size of the data container: 105
+Number of doubles to execute: 5
+
+✨ Here are the results from running the experiment!
+  Input Size    Min time (s)    Max time (s)    Avg time (s)
+------------  --------------  --------------  --------------
+         105         0.02088         0.02713         0.02423
+         210         0.06311         0.07347         0.06674
+         420         0.24092         0.30932         0.27205
+         840         0.73054         0.91064         0.84737
+        1680         3.13634         3.67502         3.42626
 ```
 
 #### InsertionSort output from running the `listsorting` program
 
-`//`
+`poetry run listsorting --starting-size 105 --number-doubles 5 --approach insertion`
 
 ```
-//
+✨ Conducting and experiment to measure the performance of list sorting!
+The chosen sorting algorithm: insertion
+Starting size of the data container: 105
+Number of doubles to execute: 5
+
+✨ Here are the results from running the experiment!
+  Input Size    Min time (s)    Max time (s)    Avg time (s)
+------------  --------------  --------------  --------------
+         105         0.00873         0.01622         0.0125
+         210         0.03044         0.04024         0.03381
+         420         0.11008         0.12328         0.11786
+         840         0.3215          0.48557         0.41888
+        1680         1.29325         1.65495         1.49031
 ```
 
 #### MergeSort output from running the `listsorting` program
 
-`//`
+`poetry run listsorting --starting-size 105 --number-doubles 5 --approach merge`
 
 ```
-//
+✨ Conducting and experiment to measure the performance of list sorting!
+The chosen sorting algorithm: merge
+Starting size of the data container: 105
+Number of doubles to execute: 5
+
+✨ Here are the results from running the experiment!
+  Input Size    Min time (s)    Max time (s)    Avg time (s)
+------------  --------------  --------------  --------------
+         105         0.0062          0.00943         0.00766
+         210         0.01496         0.01775         0.01611
+         420         0.02973         0.03157         0.03075
+         840         0.03651         0.0502          0.04108
+        1680         0.1234          0.14508         0.13437
 ```
 
 #### QuickSort output from running the `listsorting` program
 
-`//`
+`poetry run listsorting --starting-size 105 --number-doubles 5 --approach quick`
 
 ```
-//
+✨ Conducting and experiment to measure the performance of list sorting!
+The chosen sorting algorithm: quick
+Starting size of the data container: 105
+Number of doubles to execute: 5
+
+✨ Here are the results from running the experiment!
+  Input Size    Min time (s)    Max time (s)    Avg time (s)
+------------  --------------  --------------  --------------
+         105         0.0045          0.00579         0.00534
+         210         0.01058         0.01307         0.01197
+         420         0.01726         0.01956         0.01834
+         840         0.03824         0.04641         0.04123
+        1680         0.07607         0.08558         0.08098
 ```
 
 #### TimSort Output from running the `listsorting` program
+
+`poetry run listsorting --starting-size 105 --number-doubles 5 --approach tim`
+
+```
+✨ Conducting and experiment to measure the performance of list sorting!
+The chosen sorting algorithm: tim
+Starting size of the data container: 105
+Number of doubles to execute: 5
+
+✨ Here are the results from running the experiment!
+  Input Size    Min time (s)    Max time (s)    Avg time (s)
+------------  --------------  --------------  --------------
+         105         0.00743         0.00948         0.00868
+         210         0.02253         0.03134         0.02597
+         420         0.04844         0.06396         0.05609
+         840         0.04692         0.0526          0.04896
+        1680         0.11214         0.1436          0.12688
+```
 
 ## Experiment Design
 
@@ -92,7 +156,7 @@ may reference existing sources that tell you the worst-case time complexity and 
 
 ### What is challenging about designing an experiment to evaluate sorting algorithm's performance?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+For this lab, the most challenging about designing an experiment to evaluate sorting algorithm's performance was the process of creating research questions. I personally struggled to determine 
 
 ### Overall, what is the fastest sorting algorithm based on your empirical results?
 
