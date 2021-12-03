@@ -126,11 +126,11 @@ TODO: You must justify every part of your experiment design and then furnish out
 
 // TODO: Make sure that the totality of your research questions cover all of the sorting algorithms provided by the `listsorting` program.
 
-* RQ 1. ---?
+* RQ 1. With the starting container size of 105 and doubling 5 times, which approach has the fastest average time?
 
-* RQ 2. ---?
+* RQ 2. With the starting container size of 105 and doubling 5 times, which approaches have a consitent worsening performance ratio as container size increases?
 
-* RQ 3. ---?
+* RQ 3. With the starting container size of 105 and doubling 5 times, which approaches have a changing performance ratio as container size increases? 
 
 ## Performance Analysis
 
