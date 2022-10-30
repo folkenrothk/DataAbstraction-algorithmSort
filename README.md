@@ -12,4 +12,7 @@
   - Note that the program will not work unless you add the required source code
   - Refer to the `writing/reflection.md` for details about designing your experiment
 - Confirm that the program is producing acceptable experimental output
-- Provide all of the required responses in the `writing/reflection.md` file
+
+## Findings
+
+Please refer to [the final report](./writing/reflection.md) for the experimental design and findings.
